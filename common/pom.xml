@@ -87,7 +87,7 @@
 
         </dependency>
 
-        <!-- spring2.X集成redis所需common-pool2
+        <!-- spring2.X集成redis所需common-pool2-->
 
         <dependency>
 
@@ -97,7 +97,7 @@
 
             <version>2.6.0</version>
 
-        </dependency>-->
+        </dependency>
 
     </dependencies>
 
