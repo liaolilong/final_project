@@ -6,6 +6,7 @@ import com.wlaq.eduservice.entity.EduCourse;
 import com.wlaq.eduservice.entity.EduCourseDescription;
 import com.wlaq.eduservice.entity.EduTeacher;
 import com.wlaq.eduservice.entity.frontvo.CourseFrontVo;
+import com.wlaq.eduservice.entity.frontvo.CourseWebVo;
 import com.wlaq.eduservice.entity.vo.CourseInfoVo;
 import com.wlaq.eduservice.entity.vo.CoursePublishVo;
 import com.wlaq.eduservice.mapper.EduCourseMapper;
@@ -171,6 +172,12 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
         //map返回
         return map;
+    }
+
+    //根据课程id，编写sql语句查询课程信息
+    @Override
+    public CourseWebVo getBaseCourseInfo(String courseId) {
+        return baseMapper.getBaseCourseInfo(courseId);
     }
 
 }
