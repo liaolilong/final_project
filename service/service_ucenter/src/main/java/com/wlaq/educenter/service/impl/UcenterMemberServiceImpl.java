@@ -10,8 +10,6 @@ import com.wlaq.educenter.service.UcenterMemberService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wlaq.servicebase.exceptionhandler.wlaqException;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -117,5 +115,10 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         wrapper.eq("openid",openid);
         UcenterMember member = baseMapper.selectOne(wrapper);
         return member;
+    }
+    //查询一天注册人数
+    @Override
+    public Integer countRegisterDay(String day) {
+        return baseMapper.countRegisterDay(day);
     }
 }
